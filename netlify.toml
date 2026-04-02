@@ -1,0 +1,15 @@
+# netlify.toml — положить в корень репозитория
+
+[build]
+  base    = "apps/web"                # папка с package.json
+  command = "npm install && npm run build"
+  publish = ".next"                   # папка для фронтенда
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"  # плагин для Next.js
+
+[functions]
+  directory = "apps/functions"        # путь к Netlify Functions относительно корня репо
+
+[build.environment]
+  NODE_VERSION = "20"                 # Node.js >=18
