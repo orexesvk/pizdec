@@ -1,7 +1,0 @@
-[build]
-  base    = "apps/web"        # директория с package.json
-  command = "npm install && npm run build"
-  publish = ".next"
-
-[functions]
-  directory = "../apps/functions" # путь от apps/web к functions
